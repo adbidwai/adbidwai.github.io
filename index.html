@@ -55,12 +55,12 @@
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
 
-
+    <!-- LEGGED MANIPULATION REVIEW PAPER -->
     <tr onmouseout="smerf_stop()" onmouseover="smerf_start()">
       <td style="padding:20px;width:25%;vertical-align:middle">
         <div class="one">
           <div class="two" id='smerf_image'><video  width=100% muted autoplay loop>
-          <source src="images/smerf.mp4" type="video/mp4">
+          <!-- <source src="images/smerf.mp4" type="video/mp4"> -->
           Your browser does not support the video tag.
           </video></div>
           <img src='images/legged_manipulation_review.jpg' width=100%>
@@ -102,7 +102,56 @@
       </td>
     </tr>
 
-    <tr>
+    <!-- FANS -->
+    <tr onmouseout="smerf_stop()" onmouseover="smerf_start()">
+      <td style="padding:20px;width:25%;vertical-align:middle">
+        <div class="one">
+          <div class="two" id='smerf_image'><video  width=100% muted autoplay loop>
+          <!-- <source src="images/smerf.mp4" type="video/mp4"> -->
+          Your browser does not support the video tag.
+          </video></div>
+          <img src='images/FANS.jpeg' width=100%>
+        </div>
+        <script type="text/javascript">
+          function smerf_start() {
+            document.getElementById('smerf_image').style.opacity = "1";
+          }
+
+          function smerf_stop() {
+            document.getElementById('smerf_image').style.opacity = "0";
+          }
+          smerf_stop()
+        </script>
+      </td>
+      <td style="padding:20px;width:75%;vertical-align:middle">
+        <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=RJabeiAAAAAJ&citation_for_view=RJabeiAAAAAJ:u5HHmVD_uO8C">
+          <span class="papertitle">FANS: Flying Ad-hoc Network Simulator</span>
+        </a>
+        <br>
+
+        <!-- Sarang C Dhongdi, Mohit P Tahiliani, Ojit Mehta, Mihir Dharmadhikari, Vaibhav Agrawal, Aditya Bidwai -->
+    Sarang C Dhongdi,
+    Mohit P Tahiliani,
+    Ojit Mehta, 
+    Mihir Dharmadhikari, 
+    Vaibhav Agrawal, 
+    <strong>Aditya Bidwai</strong>,
+      
+        <br>
+        <em>Proceedings of the 2022 Latin America Networking Conference, 34-41</em>, 2022
+        <br>
+        <!-- <a href="https://smerf-3d.github.io/">project page</a> -->
+        <!-- <a href="https://www.youtube.com/watch?v=zhO8iUBpnCc">video</a> -->
+        <a href="https://dl.acm.org/doi/abs/10.1145/3545250.3560848">ACM Digital Library</a>
+        <p></p>
+        <p>
+          This paper introduces a Flying Ad-hoc Network Simulator (FANS) platform that connects Network Simulator (ns-3) and robot simulator (Gazebo) through the Robot Operating System (ROS). The platform is demonstrated through an implementation of a land-area survey application for a Flying Ad-hoc Network (FANET), showcasing analyses of network parameters like Packet Delivery Ratio (PDR), hop-by-hop delay, and end-to-end delay for effective real-time testing.
+        </p>
+      </td>
+    </tr>
+
+
+    <!-- <tr>
       <td style="padding:20px;width:25%;vertical-align:middle">
         <img src="images/safs.jpg" alt="safs_small" width="160" height="160" style="border-style: none">
       </td>
@@ -118,9 +167,9 @@
         <a href="data/BarronMalikCVPR2011.bib">bibtex</a>
         <p>This paper is subsumed by <a href="#SIRFS">SIRFS</a>.</p>
       </td>
-    </tr>
+    </tr> -->
 
-    <tr>
+    <!-- <tr>
       <td style="padding:20px;width:25%;vertical-align:middle">
         <img src="images/clean_promo.jpg" alt="clean-usnob" width="160" height="160">
       </td>
@@ -135,9 +184,9 @@
         <p>We use computer vision techniques to identify and remove diffraction spikes and reflection halos in the USNO-B Catalog.</p>
         <p>In use at <a href="http://www.astrometry.net">Astrometry.net</a></p>
       </td>
-    </tr>
+    </tr> -->
 
-          </tbody></table>
+          <!-- </tbody></table>
 
           
           <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody>
@@ -192,7 +241,7 @@
                 <br>
                 <a href="https://jonbarron.info/data/cvpr2023_llm_workshop_annotated.pdf">Scholars & Big Models: How Can Academics Adapt?</a>
               </td>
-            </tr>
+            </tr> -->
             
             
           </tbody></table>
