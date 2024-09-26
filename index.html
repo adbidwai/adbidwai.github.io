@@ -58,6 +58,49 @@
           </tbody></table>
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
+
+            <!-- Weiheng's Paper -->
+            <tr onmouseout="smerf_stop()" onmouseover="smerf_start()">
+              <td style="padding:20px;width:25%;vertical-align:middle">
+                <div class="one">
+                  <div class="two" id='smerf_image'><video  width=100% muted autoplay loop>
+                  <!-- <source src="images/smerf.mp4" type="video/mp4"> -->
+                  Your browser does not support the video tag.
+                  </video></div>
+                  <img src='images/legged_manipulation_review.jpg' width=100%>
+                </div>
+                <script type="text/javascript">
+                  function smerf_start() {
+                    document.getElementById('smerf_image').style.opacity = "1";
+                  }
+
+                  function smerf_stop() {
+                    document.getElementById('smerf_image').style.opacity = "0";
+                  }
+                  smerf_stop()
+                </script>
+              </td>
+              <td style="padding:20px;width:75%;vertical-align:middle">
+                <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=RJabeiAAAAAJ&citation_for_view=RJabeiAAAAAJ:9yKSN-GCB0IC">
+                  <span class="papertitle">Dynamic Coalition Formation and Routing for Multirobot Task Allocation via Reinforcement Learning</span>
+                </a>
+                <br>
+            Weiheng Dai,
+            <strong>Aditya Bidwai</strong>,
+            <a href="https://marmotlab.org/bio.html">Guillaume Sartoretti</a>,
+            
+                <br>
+                <em>2024 IEEE International Conference on Robotics and Automation (ICRA), 16567-16573</em>, 2024
+                <br>
+                <!-- <a href="https://smerf-3d.github.io/">project page</a> -->
+                <!-- <a href="https://www.youtube.com/watch?v=zhO8iUBpnCc">video</a> -->
+                <a href="https://ieeexplore.ieee.org/abstract/document/10611244">IEEE Xplore</a>
+                <p></p>
+                <p>
+                  This study explores how multiple robots can effectively coordinate to complete spatially distributed tasks, such as in construction, where the size of required teams varies. The challenge is to balance travel and waiting times while allowing robots to dynamically form and disband teams. We propose a novel reinforcement learning approach that empowers robots to create efficient schedules for task execution. Using an attention-based neural network, the robots can make informed decisions about their movements and collaborations. Additionally, we introduce a leader-follower strategy to enhance teamwork. Our findings demonstrate that this method not only matches or exceeds traditional approaches but also operates at least 100 times faster in scenarios with frequent team changes.                </p>
+              </td>
+            </tr>
+
             <!-- LEGGED MANIPULATION REVIEW PAPER -->
             <tr onmouseout="smerf_stop()" onmouseover="smerf_start()">
               <td style="padding:20px;width:25%;vertical-align:middle">
