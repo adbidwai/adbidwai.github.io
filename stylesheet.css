@@ -197,6 +197,10 @@ span.highlight {
   color: #1772d0;
 }
 
+.mobile-photo {
+  display: none;
+}
+
 .soft {
   border: none;
   border-top: 1px solid #e0e0e0;
@@ -304,6 +308,16 @@ span.highlight {
     margin-left: 0;
     margin-right: 12px;
     font-size: 13px;
+  }
+
+  /* Show mobile photo, hide original photo column */
+  .mobile-photo {
+    display: block;
+    width: 100%;
+    margin-bottom: 8px;
+  }
+  .desktop-photo {
+    display: none !important;
   }
 
   /* Site footer */
