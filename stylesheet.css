@@ -257,11 +257,18 @@ span.highlight {
     font-size: 26px !important;
   }
 
+  /* Profile photo cell: override inline width/max-width */
+  td.bio-photo {
+    width: 100% !important;
+    max-width: 100% !important;
+    text-align: center;
+  }
+
   /* Profile photo: centered, capped width, override inline styles */
   img.hoverZoomLink {
-    width: 100% !important;
+    width: 80% !important;
     height: auto !important;
-    max-width: 280px;
+    max-width: 300px;
     display: block;
     margin: 0 auto;
     object-position: 50% 0% !important;
