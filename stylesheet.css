@@ -221,25 +221,94 @@ span.highlight {
 }
 
 @media (max-width: 768px) {
-  table {
-    width: 100% !important;
-  }
-  td {
-    display: block;
+
+  /* Stack all table cells vertically */
+  table, tbody, tr, td {
+    display: block !important;
     width: 100% !important;
     box-sizing: border-box;
   }
+
+  /* Reduce padding on all cells */
+  td {
+    padding: 10px 16px !important;
+  }
+
+  /* All images scale down */
   img {
     max-width: 100%;
     height: auto;
   }
+
+  /* Name smaller on mobile */
+  .name {
+    font-size: 26px !important;
+  }
+
+  /* Profile photo: centered, capped width, override inline styles */
+  img.hoverZoomLink {
+    width: 100% !important;
+    height: auto !important;
+    max-width: 280px;
+    display: block;
+    margin: 0 auto;
+    object-position: 50% 0% !important;
+  }
+
+  /* Photo caption width */
+  .photo-caption {
+    width: 100% !important;
+    text-align: center;
+  }
+
+  /* Paper thumbnail container */
+  .one {
+    width: 100% !important;
+    height: auto !important;
+    max-width: 220px;
+    margin: 0 auto 10px auto;
+  }
+  .one img {
+    width: 100% !important;
+    height: auto !important;
+  }
+  .two {
+    width: 100% !important;
+    height: auto !important;
+    position: relative !important;
+  }
+
+  /* Education/experience logos: smaller and centered */
+  .logo-cell {
+    padding: 10px 16px 0 16px !important;
+    text-align: center;
+  }
+  .logo-cell img {
+    width: 70px !important;
+    height: auto !important;
+  }
+
+  /* Navbar: wrap links */
   .navbar {
     flex-direction: column;
     align-items: flex-start;
-    gap: 8px;
+    gap: 6px;
+    padding: 10px 16px;
+  }
+  .navbar-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
   }
   .navbar-links a {
     margin-left: 0;
-    margin-right: 16px;
+    margin-right: 12px;
+    font-size: 13px;
+  }
+
+  /* Site footer */
+  .site-footer {
+    padding: 16px;
+    font-size: 12px;
   }
 }
