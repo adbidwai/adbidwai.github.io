@@ -229,6 +229,18 @@ span.highlight {
     box-sizing: border-box;
   }
 
+  /* Bio row: use flex so we can reorder name/photo/intro */
+  tr.bio-row {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  td.bio-text {
+    order: 2;
+  }
+  td.bio-photo {
+    order: 1;
+  }
+
   /* Reduce padding on all cells */
   td {
     padding: 10px 16px !important;
