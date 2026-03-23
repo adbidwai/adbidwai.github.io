@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&display=swap');
+
 /* latin-ext */
 @font-face {
   font-family: 'Lato';
@@ -63,6 +65,23 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
+html {
+  overflow-y: scroll;
+}
+
+.site-footer {
+  text-align: center;
+  padding: 20px;
+  font-size: small;
+  color: gray;
+  margin-top: 40px;
+  border-top: 1px solid #e0e0e0;
+  width: 100%;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 a {
   color: #1772d0;
   text-decoration: none;
@@ -80,33 +99,35 @@ th,
 tr,
 p,
 a {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 14px;
+  font-family: 'Plus Jakarta Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 16px;
 }
 
 strong {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 14px;
+  font-family: 'Plus Jakarta Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 16px;
 }
 
 h2 {
   margin: 0;
-  font-weight: normal;
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 22px;
+  font-weight: 500;
+  font-family: 'Plus Jakarta Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 24px;
 }
 
 .papertitle {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 14px;
+  font-family: 'Plus Jakarta Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 16px;
   font-weight: 700;
 }
 
 .name {
   padding-top: 20px;
   margin: 0;
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 32px;
+  font-family: 'Plus Jakarta Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 34px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
 }
 
 .one {
@@ -132,4 +153,93 @@ h2 {
 
 span.highlight {
   background-color: #ffffd0;
+}
+
+.highlight {
+  color: red;
+  font-weight: bold;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.navbar-name {
+  font-family: 'Plus Jakarta Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: #333;
+  text-decoration: none;
+  letter-spacing: -0.3px;
+}
+
+.navbar-name:hover {
+  color: #f09228;
+}
+
+.navbar-links a {
+  margin-left: 24px;
+  font-size: 14px;
+  color: #555;
+  text-decoration: none;
+}
+
+.navbar-links a:hover {
+  color: #f09228;
+}
+
+.navbar-links a.active {
+  font-weight: bold;
+  color: #1772d0;
+}
+
+.soft {
+  border: none;
+  border-top: 1px solid #e0e0e0;
+  margin: 10px 20px;
+}
+
+.entry-name {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 0 4px 0;
+}
+
+.entry-role {
+  font-size: 14px;
+  margin: 0 0 3px 0;
+}
+
+.entry-meta {
+  font-size: 13px;
+  color: gray;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  table {
+    width: 100% !important;
+  }
+  td {
+    display: block;
+    width: 100% !important;
+    box-sizing: border-box;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .navbar-links a {
+    margin-left: 0;
+    margin-right: 16px;
+  }
 }
