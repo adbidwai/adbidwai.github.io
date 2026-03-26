@@ -70,16 +70,17 @@ html {
 }
 
 .site-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
   text-align: center;
-  padding: 20px;
+  padding: 10px 20px;
   font-size: small;
   color: gray;
-  margin-top: 40px;
+  background-color: #fff;
   border-top: 1px solid #e0e0e0;
-  width: 100%;
-  max-width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
+  z-index: 100;
 }
 
 a {
@@ -330,4 +331,107 @@ span.highlight {
     padding: 16px;
     font-size: 12px;
   }
+
+  /* Dark mode button on mobile */
+  .dark-mode-btn {
+    margin-left: 0;
+    margin-right: 8px;
+  }
+}
+
+/* ===== Dark Mode Button ===== */
+
+.dark-mode-btn {
+  background: none;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  font-size: 15px;
+  padding: 0;
+  line-height: 1;
+  color: #666;
+  margin-left: 16px;
+  transition: border-color 0.2s, color 0.2s;
+  vertical-align: middle;
+  flex-shrink: 0;
+}
+
+.dark-mode-btn:hover {
+  border-color: #f09228;
+  color: #f09228;
+}
+
+/* ===== Dark Mode Styles ===== */
+
+html.dark body {
+  background-color: #1a1a1a;
+  color: #d4d4d4;
+}
+
+html.dark a {
+  color: #5ba3f5;
+}
+
+html.dark a:focus,
+html.dark a:hover {
+  color: #f09228;
+}
+
+html.dark .navbar {
+  border-bottom-color: #333;
+}
+
+html.dark .navbar-name {
+  color: #e0e0e0;
+}
+
+html.dark .navbar-name:hover {
+  color: #f09228;
+}
+
+html.dark .navbar-links a {
+  color: #aaa;
+}
+
+html.dark .navbar-links a.active {
+  color: #5ba3f5;
+}
+
+html.dark .site-footer {
+  background-color: #1a1a1a;
+  border-top-color: #333;
+  color: #888;
+}
+
+html.dark hr.soft {
+  border-top-color: #333;
+}
+
+html.dark span.highlight {
+  background-color: #3a3a00;
+  color: #d4d4d4;
+}
+
+html.dark .entry-meta {
+  color: #888;
+}
+
+html.dark .photo-caption {
+  color: #888 !important;
+}
+
+html.dark .dark-mode-btn {
+  border-color: #555;
+  color: #aaa;
+}
+
+html.dark .dark-mode-btn:hover {
+  border-color: #f09228;
+  color: #f09228;
+}
+
+html.dark button {
+  color: #d4d4d4;
 }
