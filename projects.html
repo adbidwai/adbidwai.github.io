@@ -8,6 +8,26 @@
     <link rel="stylesheet" type="text/css" href="stylesheet.css?v=4">
     <script>if(localStorage.getItem('dark-mode')==='true')document.documentElement.classList.add('dark');</script>
     <script src="darkmode.js?v=1" defer></script>
+    <style>
+      .project-placeholder {
+        width: 160px;
+        height: 110px;
+        background-color: #e8e8e8;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        color: #999;
+        text-align: center;
+        padding: 8px;
+        box-sizing: border-box;
+      }
+      html.dark .project-placeholder {
+        background-color: #2a2a2a;
+        color: #555;
+      }
+    </style>
   </head>
 
   <body>
@@ -37,25 +57,104 @@
 
     <table style="width:100%;max-width:1000px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
-      <!--
-        To add a project, copy the block below and fill it in:
-
-        <tr>
-          <td style="padding:20px;width:25%;vertical-align:middle">
-            <img src="images/your_image.jpg" alt="project thumbnail" width="160" style="border-radius:4px;">
-          </td>
-          <td style="padding:20px;width:75%;vertical-align:middle">
-            <span class="papertitle">Project Title</span>
-            <br>
-            <em>Python, ROS, PyTorch</em> &nbsp;|&nbsp; <a href="https://github.com/adbidwai/repo">GitHub</a>
-            <p>Short description of what the project does and what you learned.</p>
-          </td>
-        </tr>
-      -->
-
+      <!-- Cooperative UAV-UGV Localization -->
       <tr>
-        <td style="padding:20px;color:gray;font-style:italic;">
-          Projects coming soon.
+        <td style="padding:16px 20px 16px 20px;width:25%;vertical-align:middle;text-align:center;">
+          <div class="project-placeholder">image / gif</div>
+        </td>
+        <td style="padding:16px 20px;width:75%;vertical-align:middle">
+          <span class="papertitle">Cooperative UAV-UGV Localization using Extended Kalman Filter (EKF)</span>
+          &nbsp;[<a href="https://github.com/adbidwai/uav_ugv_coop_localization">code</a>]
+          <br>
+          <em>MATLAB, EKF</em> &nbsp;|&nbsp; <span style="color:gray;">Sept '25 – Dec '25</span>
+          <ul style="margin:6px 0 0 0; padding-left:18px;">
+            <li>Developed a nonlinear UAV-UGV localization system in MATLAB using an EKF and simulation-based validation.</li>
+            <li>Evaluated estimator consistency using Monte Carlo testing with NEES/NIS analysis on simulated and real data.</li>
+          </ul>
+        </td>
+      </tr>
+
+      <!-- Optimization-based Motion Planning -->
+      <tr>
+        <td style="padding:16px 20px 16px 20px;width:25%;vertical-align:middle;text-align:center;">
+          <div class="project-placeholder">image / gif</div>
+        </td>
+        <td style="padding:16px 20px;width:75%;vertical-align:middle">
+          <span class="papertitle">Optimization-based Motion Planning for 3D Environments</span>
+          &nbsp;[<a href="https://github.com/adbidwai/trajectory_optimization">code</a>]
+          <br>
+          <em>MATLAB, YALMIP, MOSEK</em> &nbsp;|&nbsp; <span style="color:gray;">Sept '25 – Dec '25</span>
+          <ul style="margin:6px 0 0 0; padding-left:18px;">
+            <li>Built a convex optimization–based collision-free trajectory generation framework in MATLAB using YALMIP/MOSEK.</li>
+            <li>Modeled cuboidal and cylindrical obstacles as convex sets using superellipse-based formulations for tractable optimization.</li>
+          </ul>
+        </td>
+      </tr>
+
+      <!-- Dynamic Visual SLAM -->
+      <tr>
+        <td style="padding:16px 20px 16px 20px;width:25%;vertical-align:middle;text-align:center;">
+          <div class="project-placeholder">image / gif</div>
+        </td>
+        <td style="padding:16px 20px;width:75%;vertical-align:middle">
+          <span class="papertitle">Dynamic Visual SLAM for Crowded Indoor Environments</span>
+          <br>
+          <em>ORB-SLAM3, SegFormer, C++, Python</em> &nbsp;|&nbsp; <span style="color:gray;">Jan '25 – May '25</span>
+          <ul style="margin:6px 0 0 0; padding-left:18px;">
+            <li>Integrated ORB-SLAM3 pipeline with Nvidia SegFormer to detect and reject moving objects in crowded environments.</li>
+            <li>Evaluated in real university environments, achieving 0.077 m ATE and 0.073 m / 1.33° RPE, showing robust localization.</li>
+          </ul>
+        </td>
+      </tr>
+
+      <!-- Clothbot -->
+      <tr>
+        <td style="padding:16px 20px 16px 20px;width:25%;vertical-align:middle;text-align:center;">
+          <img src="videos/success_pink_sped_up.gif" alt="Clothbot cloth manipulation" width="160" style="border-radius:4px;">
+        </td>
+        <td style="padding:16px 20px;width:75%;vertical-align:middle">
+          <span class="papertitle">Clothbot &mdash; Cloth Manipulation using Self-Supervised Value Network</span>
+          &nbsp;[<a href="https://drive.google.com/file/d/1KO3wQVlIl-LVDHi9Dt9xpP6c9oyZ7VSB/view?usp=drive_link">poster</a>, <a href="https://pranay-junare.github.io/clothbot/">web</a>]
+          <br>
+          <em>Python, ROS, PyTorch, UR5</em> &nbsp;|&nbsp; <span style="color:gray;">Sept '24 – Dec '24</span>
+          <ul style="margin:6px 0 0 0; padding-left:18px;">
+            <li>Developed a self-supervised value network policy using spatial action maps for dynamic cloth unfolding on a dual UR5.</li>
+            <li>Achieved 95% coverage on rectangular cloths and 87.68% on unseen garments (T-shirts) with zero-shot sim-to-real transfer.</li>
+          </ul>
+        </td>
+      </tr>
+
+      <!-- Flying Ad-hoc Network Simulator -->
+      <tr>
+        <td style="padding:16px 20px 16px 20px;width:25%;vertical-align:middle;text-align:center;">
+          <img src="images/FANS.jpeg" alt="FANS simulator" width="160" style="border-radius:4px;">
+        </td>
+        <td style="padding:16px 20px;width:75%;vertical-align:middle">
+          <span class="papertitle">Flying Ad-hoc Network Simulator for Multi-UAV Exploration</span>
+          &nbsp;[<a href="https://github.com/Sarang-BITS/FANS">code</a>]
+          <br>
+          <em>ROS, C++, NS3, Gazebo, PX4 SITL</em> &nbsp;|&nbsp; <span style="color:gray;">Aug '20 – Aug '22</span>
+          <ul style="margin:6px 0 0 0; padding-left:18px;">
+            <li>Developed a co-simulation platform integrating NS3 and Gazebo through ROS/C++ for testing multi-UAV swarm tasks.</li>
+            <li>Implemented UAV swarm motion planning (C++) and analyzed network metrics like PDR, hop-by-hop and end-to-end delay.</li>
+            <li>Simulated a wildfire rescue UAV swarm (PX4 SITL and ROS) for surveillance application. Published in <a href="https://dl.acm.org/doi/10.1145/3545250.3560848">ACM LANC '22</a>.</li>
+          </ul>
+        </td>
+      </tr>
+
+      <!-- Mars Rover -->
+      <tr>
+        <td style="padding:16px 20px 16px 20px;width:25%;vertical-align:middle;text-align:center;">
+          <div class="project-placeholder">image / gif</div>
+        </td>
+        <td style="padding:16px 20px;width:75%;vertical-align:middle">
+          <span class="papertitle">Mars Rover for University Rover Challenge &mdash; Controls Team Lead</span>
+          <br>
+          <em>ROS, C++, Nvidia Jetson</em> &nbsp;|&nbsp; <span style="color:gray;">Aug '19 – Apr '21</span>
+          <ul style="margin:6px 0 0 0; padding-left:18px;">
+            <li>Designed path planning and tracking (PID, Stanley, Pure Pursuit) controllers for the manipulation and locomotion systems.</li>
+            <li>Developed ROS/C++-based drivers and software interfaces to integrate sensors and motor drivers with Nvidia Jetson.</li>
+          </ul>
         </td>
       </tr>
 
