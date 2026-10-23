@@ -154,6 +154,38 @@ span.highlight {
   margin: 0;
 }
 
+.robot-reel {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 0 2.5%;
+}
+
+.robot-reel figure {
+  margin: 0;
+}
+
+.robot-reel video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 4px;
+  background-color: #e8e0d0;
+}
+
+.robot-reel figcaption,
+.robot-reel figcaption a {
+  font-size: 13px;
+}
+
+.robot-reel figcaption {
+  margin-top: 6px;
+  color: gray;
+  text-align: center;
+  line-height: 1.4;
+}
+
 @media (max-width: 768px) {
 
   /* Stack all table cells vertically */
@@ -212,6 +244,13 @@ span.highlight {
   .photo-caption {
     width: 100% !important;
     text-align: center;
+  }
+
+  /* Robot videos: one per row */
+  .robot-reel {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0;
   }
 
   /* Paper thumbnail container */
@@ -351,6 +390,14 @@ html.dark .entry-meta {
 
 html.dark .photo-caption {
   color: #888 !important;
+}
+
+html.dark .robot-reel video {
+  background-color: #2a2a2a;
+}
+
+html.dark .robot-reel figcaption {
+  color: #888;
 }
 
 html.dark .dark-mode-btn {

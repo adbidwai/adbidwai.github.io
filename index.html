@@ -18,7 +18,7 @@
     <link rel="icon" href="images/favicon/favicon-32x32.png?v=3" sizes="32x32" type="image/png">
     <link rel="icon" href="images/favicon/favicon-16x16.png?v=3" sizes="16x16" type="image/png">
     <link rel="apple-touch-icon" href="images/favicon/apple-touch-icon.png?v=3">
-    <link rel="stylesheet" type="text/css" href="stylesheet.css?v=7">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css?v=8">
     <script>if(localStorage.getItem('dark-mode')==='true')document.documentElement.classList.add('dark');</script>
     <script src="darkmode.js?v=1" defer></script>
   </head>
@@ -91,6 +91,34 @@
               </td>
             </tr>
           </tbody></table>
+
+<!-- Robot videos -->
+          <div class="robot-reel">
+            <figure>
+              <video autoplay muted loop playsinline poster="videos/quadrotor_square.jpg">
+                <source src="videos/quadrotor_square.mp4" type="video/mp4">
+              </video>
+              <figcaption>Quadrotor tracking a square trajectory (2&times; speed)</figcaption>
+            </figure>
+            <figure>
+              <video autoplay muted loop playsinline poster="videos/quadrotor_circle.jpg">
+                <source src="videos/quadrotor_circle.mp4" type="video/mp4">
+              </video>
+              <figcaption>Quadrotor tracking a circle trajectory (2&times; speed)</figcaption>
+            </figure>
+            <figure>
+              <video autoplay muted loop playsinline poster="videos/hexapod_walk.jpg">
+                <source src="videos/hexapod_walk.mp4" type="video/mp4">
+              </video>
+              <figcaption>Hexapod walking with a workspace CPG controller (HEBI Daisy) &middot; <a href="https://www.youtube.com/watch?v=EXVmmGrf_3U">full video</a></figcaption>
+            </figure>
+            <figure>
+              <video autoplay muted loop playsinline poster="videos/kratos_rover.jpg">
+                <source src="videos/kratos_rover.mp4" type="video/mp4">
+              </video>
+              <figcaption>Kratos Mars rover for the University Rover Challenge</figcaption>
+            </figure>
+          </div>
 
     <!-- <tr>
       <td style="padding:20px;width:25%;vertical-align:middle">
