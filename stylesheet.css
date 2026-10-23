@@ -154,6 +154,15 @@ span.highlight {
   margin: 0;
 }
 
+.robot-reel-header {
+  padding: 10px 2.5% 14px;
+}
+
+.robot-reel-header p {
+  margin: 4px 0 0 0;
+  color: #555;
+}
+
 .robot-reel {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -247,6 +256,9 @@ span.highlight {
   }
 
   /* Robot videos: one per row */
+  .robot-reel-header {
+    padding: 0 0 12px;
+  }
   .robot-reel {
     grid-template-columns: 1fr;
     gap: 20px;
@@ -398,6 +410,10 @@ html.dark .robot-reel video {
 
 html.dark .robot-reel figcaption {
   color: #888;
+}
+
+html.dark .robot-reel-header p {
+  color: #aaa;
 }
 
 html.dark .dark-mode-btn {
