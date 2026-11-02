@@ -1,17 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/computer-modern@0.1.2/cmu-serif.css');
 
 html {
   overflow-y: scroll;
+  /* Computer Modern has a small x-height; scale it so text reads at a normal size */
+  font-size-adjust: 0.48;
 }
 
 body {
   background-color: #faf6ee;
+  /* Column layout so the footer can sit at the bottom of short pages */
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 16px); /* 100vh minus the default 8px body margin top and bottom */
 }
 
 .site-footer {
   text-align: center;
-  padding: 20px 20px 30px;
-  margin-top: 30px;
+  padding: 50px 20px 30px;
+  margin-top: auto; /* push to the bottom when the page is shorter than the window */
   font-size: small;
   color: gray;
 }
@@ -33,24 +39,24 @@ th,
 tr,
 p,
 a {
-  font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Helvetica, Arial, sans-serif;
+  font-family: 'CMU Serif', 'Computer Modern Serif', Georgia, serif;
   font-size: 16px;
 }
 
 strong {
-  font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Helvetica, Arial, sans-serif;
+  font-family: 'CMU Serif', 'Computer Modern Serif', Georgia, serif;
   font-size: 16px;
 }
 
 h2 {
   margin: 0;
   font-weight: 500;
-  font-family: 'Newsreader', Georgia, 'Times New Roman', serif;
+  font-family: 'CMU Serif', 'Computer Modern Serif', Georgia, serif;
   font-size: 26px;
 }
 
 .papertitle {
-  font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Helvetica, Arial, sans-serif;
+  font-family: 'CMU Serif', 'Computer Modern Serif', Georgia, serif;
   font-size: 16px;
   font-weight: 700;
 }
@@ -58,7 +64,7 @@ h2 {
 .name {
   padding-top: 20px;
   margin: 0;
-  font-family: 'Newsreader', Georgia, 'Times New Roman', serif;
+  font-family: 'CMU Serif', 'Computer Modern Serif', Georgia, serif;
   font-size: 38px;
   font-weight: 600;
   letter-spacing: -0.3px;
@@ -103,7 +109,7 @@ span.highlight {
 }
 
 .navbar-name {
-  font-family: 'Newsreader', Georgia, 'Times New Roman', serif;
+  font-family: 'CMU Serif', 'Computer Modern Serif', Georgia, serif;
   font-size: 19px;
   font-weight: 600;
   color: #333;
@@ -117,7 +123,7 @@ span.highlight {
 
 .navbar-links a {
   margin-left: 24px;
-  font-size: 14px;
+  font-size: 16px;
   color: #555;
   text-decoration: none;
 }
@@ -144,12 +150,12 @@ span.highlight {
 }
 
 .entry-role {
-  font-size: 14px;
+  font-size: 16px;
   margin: 0 0 3px 0;
 }
 
 .entry-meta {
-  font-size: 13px;
+  font-size: 15px;
   color: gray;
   margin: 0;
 }
@@ -195,6 +201,13 @@ span.highlight {
   line-height: 1.4;
 }
 
+/* Justify bio paragraphs LaTeX-style; hyphenation keeps word spacing even */
+td.bio-text p {
+  text-align: justify;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
 @media (max-width: 768px) {
 
   /* Stack all table cells vertically */
@@ -211,6 +224,10 @@ span.highlight {
   }
   td.bio-text {
     order: 2;
+  }
+  /* Too narrow for justified text: it leaves wide gaps between words */
+  td.bio-text p {
+    text-align: left;
   }
   td.bio-photo {
     order: 1;
@@ -307,7 +324,7 @@ span.highlight {
   .navbar-links a {
     margin-left: 0;
     margin-right: 12px;
-    font-size: 13px;
+    font-size: 15px;
   }
 
   /* Site footer */
@@ -329,10 +346,10 @@ span.highlight {
   background: none;
   border: 1px solid #ccc;
   border-radius: 50%;
-  width: 28px;
-  height: 28px;
+  width: 32px;
+  height: 32px;
   cursor: pointer;
-  font-size: 15px;
+  font-size: 17px;
   padding: 0;
   line-height: 1;
   color: #666;
