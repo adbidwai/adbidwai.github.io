@@ -8,6 +8,7 @@ html {
 
 body {
   background-color: #faf6ee;
+  color: #272727;
   /* Column layout so the footer can sit at the bottom of short pages */
   display: flex;
   flex-direction: column;
@@ -61,13 +62,17 @@ h2 {
   font-weight: 700;
 }
 
-.name {
+/* td.bio-text p.name: must beat the 18px "td.bio-text p" bio rule below */
+.name,
+td.bio-text p.name {
   padding-top: 20px;
   margin: 0;
+  line-height: 1.15;
   font-family: 'CMU Serif', 'Computer Modern Serif', Georgia, serif;
   font-size: 38px;
-  font-weight: 600;
-  letter-spacing: -0.3px;
+  font-size-adjust: none;
+  font-weight: 700;
+  text-align: left;
 }
 
 .one {
@@ -119,6 +124,15 @@ span.highlight {
 
 .navbar-name:hover {
   color: #f09228;
+}
+
+/* Homepage already shows the name as a big heading; drop the duplicate in the navbar */
+.navbar-home {
+  justify-content: flex-end;
+}
+
+.navbar-home .navbar-name {
+  display: none;
 }
 
 .navbar-links a {
@@ -201,11 +215,31 @@ span.highlight {
   line-height: 1.4;
 }
 
-/* Justify bio paragraphs LaTeX-style; hyphenation keeps word spacing even */
+/* Bio text: plain 18px Computer Modern, left-aligned, relaxed spacing */
 td.bio-text p {
-  text-align: justify;
-  -webkit-hyphens: auto;
-  hyphens: auto;
+  font-size: 18px;
+  font-size-adjust: none;
+  line-height: 1.3em;
+  margin: 0.2em 0 0.8em;
+}
+
+td.bio-text p a,
+td.bio-text p strong {
+  font-size: inherit;
+}
+
+/* One-line role/affiliation under the name */
+td.bio-text p.subtitle {
+  font-size: 16px;
+  color: #666;
+  text-align: left;
+  margin: 2px 0 8px;
+}
+
+/* Contact links row directly under the subtitle */
+td.bio-text p.bio-links {
+  text-align: left;
+  margin: 0 0 20px;
 }
 
 @media (max-width: 768px) {
@@ -225,10 +259,6 @@ td.bio-text p {
   td.bio-text {
     order: 2;
   }
-  /* Too narrow for justified text: it leaves wide gaps between words */
-  td.bio-text p {
-    text-align: left;
-  }
   td.bio-photo {
     order: 1;
   }
@@ -246,7 +276,7 @@ td.bio-text p {
 
   /* Name smaller on mobile */
   .name {
-    font-size: 26px !important;
+    font-size: 30px !important;
   }
 
   /* Profile photo cell: override inline width/max-width */
@@ -415,6 +445,10 @@ html.dark span.highlight {
 
 html.dark .entry-meta {
   color: #888;
+}
+
+html.dark td.bio-text p.subtitle {
+  color: #999;
 }
 
 html.dark .photo-caption {
